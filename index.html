@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VitalMind - איזון גוף ונפש</title>
+  <meta name="description" content="אתר מקצועי לאיזון גוף ונפש עם תכנים בנושא בריאות נפשית ופיזית. יצירת קשר ותמיכה.">
+  <meta name="keywords" content="בריאות, איזון, נפש, גוף, VitalMind, טיפול, מדיטציה, חיים בריאים" />
+  <meta name="author" content="הסיימונולושן | פתרונות דיגיטליים" />
+  <style>
+    /* Reset and base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f7f9fb;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+    }
+    a {
+      color: #6c3483;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background: #6c3483;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+    nav ul li {
+      font-weight: 600;
+    }
+    nav ul li a {
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #c3a1e8;
+    }
+
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      color: #6c3483;
+      margin-bottom: 0.8rem;
+      border-bottom: 2px solid #c3a1e8;
+      padding-bottom: 0.3rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* טופס יצירת קשר */
+    form {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgb(108 52 131 / 0.2);
+      max-width: 500px;
+      margin-top: 1rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      color: #4b2c78;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1.8px solid #c3a1e8;
+      border-radius: 5px;
+      font-size: 1rem;
+      resize: vertical;
+      font-family: inherit;
+      color: #333;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #6c3483;
+      box-shadow: 0 0 5px #6c3483;
+    }
+    button {
+      background: #6c3483;
+      color: white;
+      font-weight: 700;
+      border: none;
+      padding: 0.7rem 1.4rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background: #532d6a;
+    }
+
+    /* Footer */
+    footer {
+      background: #4b2c78;
+      color: white;
+      text-align: center;
+      padding: 1rem 1rem;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #d5b3f1;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 0.6rem;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      main {
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header role="banner">
+  <h1>VitalMind</h1>
+  <nav role="navigation" aria-label="תפריט ראשי">
+    <ul>
+      <li><a href="#about">על האתר</a></li>
+      <li><a href="#contact">צור קשר</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main role="main">
+  <section id="about" tabindex="0" aria-label="מידע על האתר">
+    <h2>על האתר</h2>
+    <p>ברוכים הבאים ל־<strong>VitalMind</strong> – המקום שבו גוף ונפש פוגשים איזון אמיתי.<br>
+    כאן תמצאו תכנים מקצועיים, מעודכנים ואמינים בתחומי הבריאות הנפשית והפיזית, לצד כלים פשוטים לשיפור איכות החיים.</p>
+    <p>האתר בנוי בעיצוב נקי, מודרני ונגיש, כדי להעניק לכם חוויית גלישה איכותית בכל מכשיר.</p>
+  </section>
+
+  <section id="contact" tabindex="0" aria-label="טופס יצירת קשר">
+    <h2>צור קשר</h2>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain" aria-label="טופס לשליחת הודעה">
+      <label for="name">שם מלא</label>
+      <input type="text" id="name" name="name" required aria-required="true" placeholder="הכנס שם מלא" />
+
+      <label for="email">אימייל</label>
+      <input type="email" id="email" name="email" required aria-required="true" placeholder="הכנס כתובת אימייל" />
+
+      <label for="message">הודעה</label>
+      <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="כתוב כאן את הודעתך"></textarea>
+
+      <button type="submit">שלח</button>
+    </form>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <p>© 2025 הסיימונולושן | פתרונות דיגיטליים |  
+  <a href="mailto:haafrxhhnui@gmail.com" aria-label="שלח מייל להסיימונולושן">צור קשר</a></p>
+</footer>
+
+</body>
+</html>
