@@ -1,202 +1,132 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
+<!DOCTYPE html><html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VitalMind - איזון גוף ונפש</title>
-  <meta name="description" content="אתר מקצועי לאיזון גוף ונפש עם תכנים בנושא בריאות נפשית ופיזית. יצירת קשר ותמיכה.">
-  <meta name="keywords" content="בריאות, איזון, נפש, גוף, VitalMind, טיפול, מדיטציה, חיים בריאים" />
-  <meta name="author" content="הסיימונולושן | פתרונות דיגיטליים" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="אתר יוקרתי לבריאות גוף ונפש – VitalMind">
+  <title>VitalMind | איזון לגוף ולנפש</title>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    /* Reset and base */
+    :root {
+      --main-color: #6C3483; /* קטיפה סגולה */
+      --accent-color: #5fd2bc; /* ירוק רגוע */
+      --light-bg: #f9f9f9;
+      --text-dark: #222;
+    }
     * {
       margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Assistant', sans-serif;
     }
     body {
-      background: #f7f9fb;
-      color: #333;
-      line-height: 1.6;
+      background: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+    header {
+      position: relative;
+      background: linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(240,240,255,0.8));
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      font-size: 16px;
-    }
-    a {
-      color: #6c3483;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    header {
-      background: #6c3483;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    header::before {
+      content: "";
+      background: url('https://images.unsplash.com/photo-1600185365084-cba2b6f6b7a1?auto=format&fit=crop&w=1600&q=80') center/cover;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      opacity: 0.2;
+      z-index: 0;
     }
     header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.2rem;
-    }
-    nav ul li {
-      font-weight: 600;
-    }
-    nav ul li a {
-      color: white;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #c3a1e8;
-    }
-
-    main {
-      flex: 1;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-    }
-    h2 {
-      font-size: 1.7rem;
-      color: #6c3483;
-      margin-bottom: 0.8rem;
-      border-bottom: 2px solid #c3a1e8;
-      padding-bottom: 0.3rem;
-    }
-    p {
+      position: relative;
+      font-size: 3rem;
+      color: var(--main-color);
       margin-bottom: 1rem;
     }
-
-    /* טופס יצירת קשר */
-    form {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgb(108 52 131 / 0.2);
-      max-width: 500px;
-      margin-top: 1rem;
+    header p {
+      position: relative;
+      font-size: 1.3rem;
+      color: #444;
+      max-width: 600px;
+      margin: 0 auto 2rem;
     }
-    label {
-      display: block;
-      margin-bottom: 0.4rem;
-      font-weight: 600;
-      color: #4b2c78;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1.8px solid #c3a1e8;
-      border-radius: 5px;
-      font-size: 1rem;
-      resize: vertical;
-      font-family: inherit;
-      color: #333;
-    }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #6c3483;
-      box-shadow: 0 0 5px #6c3483;
-    }
-    button {
-      background: #6c3483;
+    .cta-btn {
+      position: relative;
+      background: var(--accent-color);
       color: white;
-      font-weight: 700;
       border: none;
-      padding: 0.7rem 1.4rem;
-      border-radius: 6px;
-      cursor: pointer;
+      padding: 1rem 2rem;
       font-size: 1.1rem;
-      transition: background-color 0.3s ease;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
     }
-    button:hover {
-      background: #532d6a;
+    .cta-btn:hover {
+      background: #4abfaa;
     }
-
-    /* Footer */
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--main-color);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent-color);
+    }
     footer {
-      background: #4b2c78;
-      color: white;
+      background: #efefef;
+      padding: 2rem;
       text-align: center;
-      padding: 1rem 1rem;
       font-size: 0.9rem;
     }
-    footer a {
-      color: #d5b3f1;
+    .contact-buttons a {
+      display: inline-block;
+      background: var(--main-color);
+      color: white;
+      padding: 0.7rem 1.2rem;
+      margin: 0.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
     }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 0.8rem;
-        margin-top: 0.6rem;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      main {
-        margin: 1rem;
-      }
+    .contact-buttons a:hover {
+      background: #532c67;
     }
   </style>
 </head>
 <body>
-
-<header role="banner">
-  <h1>VitalMind</h1>
-  <nav role="navigation" aria-label="תפריט ראשי">
-    <ul>
-      <li><a href="#about">על האתר</a></li>
-      <li><a href="#contact">צור קשר</a></li>
-    </ul>
+  <header>
+    <h1>VitalMind</h1>
+    <p>איזון לגוף ולנפש<br>המסע לבריאות מתחיל כאן, בנשימה עמוקה ובכוונה חדשה</p>
+    <a href="#contact" class="cta-btn">בואו נתחיל</a>
+  </header>
+  <nav>
+    <a href="#about">אודות</a>
+    <a href="#services">שירותים</a>
+    <a href="#blog">בלוג</a>
+    <a href="#contact">צור קשר</a>
   </nav>
-</header>
-
-<main role="main">
-  <section id="about" tabindex="0" aria-label="מידע על האתר">
-    <h2>על האתר</h2>
-    <p>ברוכים הבאים ל־<strong>VitalMind</strong> – המקום שבו גוף ונפש פוגשים איזון אמיתי.<br>
-    כאן תמצאו תכנים מקצועיים, מעודכנים ואמינים בתחומי הבריאות הנפשית והפיזית, לצד כלים פשוטים לשיפור איכות החיים.</p>
-    <p>האתר בנוי בעיצוב נקי, מודרני ונגיש, כדי להעניק לכם חוויית גלישה איכותית בכל מכשיר.</p>
-  </section>
-
-  <section id="contact" tabindex="0" aria-label="טופס יצירת קשר">
-    <h2>צור קשר</h2>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain" aria-label="טופס לשליחת הודעה">
-      <label for="name">שם מלא</label>
-      <input type="text" id="name" name="name" required aria-required="true" placeholder="הכנס שם מלא" />
-
-      <label for="email">אימייל</label>
-      <input type="email" id="email" name="email" required aria-required="true" placeholder="הכנס כתובת אימייל" />
-
-      <label for="message">הודעה</label>
-      <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="כתוב כאן את הודעתך"></textarea>
-
-      <button type="submit">שלח</button>
-    </form>
-  </section>
-</main>
-
-<footer role="contentinfo">
-  <p>© 2025 הסיימונולושן | פתרונות דיגיטליים |  
-  <a href="mailto:haafrxhhnui@gmail.com" aria-label="שלח מייל להסיימונולושן">צור קשר</a></p>
-</footer>
-
+  <footer>
+    <p>נבנה על ידי <strong>הסיימונולושן | פתרונות דיגיטליים</strong><br>
+    רוצים אתר כזה? צרו קשר: 055-315-1070 | TheSimonolution@gmail.com</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/972553151070" target="_blank">וואטסאפ</a>
+      <a href="mailto:TheSimonolution@gmail.com">אימייל</a>
+    </div>
+  </footer>
 </body>
 </html>
